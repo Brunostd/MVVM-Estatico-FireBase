@@ -9,13 +9,13 @@
         android:id="@+id/navigation_home"
         android:name="com.deny.studyarchietecturemvvm.ui.fragments.pessoa.PessoaFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_pessoa" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.deny.studyarchietecturemvvm.ui.fragments.lista_pessoa.ListaPessoaFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_lista_pessoas" />
 
     <fragment
         android:id="@+id/navigation_notifications"

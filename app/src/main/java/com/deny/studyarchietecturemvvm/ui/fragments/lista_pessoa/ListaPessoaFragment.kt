@@ -4,17 +4,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.deny.studyarchietecturemvvm.adapter.PessoaAdapter
-import com.deny.studyarchietecturemvvm.databinding.FragmentDashboardBinding
+import com.deny.studyarchietecturemvvm.databinding.FragmentListaPessoasBinding
+import com.deny.studyarchietecturemvvm.ui.fragments.pessoa.PessoaViewModel
 
 class ListaPessoaFragment : Fragment() {
 
     private lateinit var listaPessoaViewModel: ListaPessoaViewModel
-    private var _binding: FragmentDashboardBinding? = null
+    private lateinit var pessoaViewModel: PessoaViewModel
+    private var _binding: FragmentListaPessoasBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -28,7 +31,10 @@ class ListaPessoaFragment : Fragment() {
         listaPessoaViewModel =
             ViewModelProvider(this).get(ListaPessoaViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        pessoaViewModel =
+            ViewModelProvider(this).get(PessoaViewModel::class.java)
+
+        _binding = FragmentListaPessoasBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         binding.recyclerViewListaPessoas.layoutManager = LinearLayoutManager(context)
@@ -37,6 +43,10 @@ class ListaPessoaFragment : Fragment() {
             binding.recyclerViewListaPessoas.adapter = PessoaAdapter(it.getListaPessoas())
         })
 
+        val textViewRecebe: TextView = binding.textViewRecebe
+        pessoaViewModel.pessoa.observe(viewLifecycleOwner, Observer {
+            textViewRecebe.text = it.nome
+        })
         /*val textView: TextView = binding.textDashboard
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it

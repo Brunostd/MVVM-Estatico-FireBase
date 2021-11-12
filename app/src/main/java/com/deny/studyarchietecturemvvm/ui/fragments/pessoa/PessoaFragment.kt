@@ -8,12 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.deny.studyarchietecturemvvm.databinding.FragmentHomeBinding
+import com.deny.studyarchietecturemvvm.databinding.FragmentPessoaBinding
 
 class PessoaFragment : Fragment() {
 
     private lateinit var pessoaViewModel: PessoaViewModel
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentPessoaBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -27,7 +27,7 @@ class PessoaFragment : Fragment() {
         pessoaViewModel =
             ViewModelProvider(this).get(PessoaViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentPessoaBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         /*val textView: TextView = binding.textHome
