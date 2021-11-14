@@ -45,6 +45,8 @@ class ListaPessoaFragment : Fragment() {
 
         val textViewRecebe: TextView = binding.textViewRecebe
         pessoaViewModel.pessoa.observe(viewLifecycleOwner, Observer {
+            var nome: String = "Jaquelini"
+            pessoaViewModel.alterarNome(nome)
             textViewRecebe.text = it.nome
         })
         /*val textView: TextView = binding.textDashboard

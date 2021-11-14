@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.deny.studyarchietecturemvvm.model.GestorPessoas
+import com.deny.studyarchietecturemvvm.model.Pessoa
 
 class ListaPessoaViewModel : ViewModel() {
 

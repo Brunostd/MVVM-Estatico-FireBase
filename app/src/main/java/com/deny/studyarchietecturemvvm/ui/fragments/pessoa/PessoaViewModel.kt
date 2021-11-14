@@ -18,6 +18,11 @@ class PessoaViewModel : ViewModel() {
         idade = 22,
         email = "bruno.std"
     )
+
+    fun alterarNome(nome: String){
+        instanciaPessoa.nome = nome
+    }
+
     private val _pessoa = MutableLiveData<Pessoa>().apply {
         value = instanciaPessoa
     }
