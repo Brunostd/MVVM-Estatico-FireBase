@@ -9,7 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.deny.studyarchietecturemvvm.adapter.PessoaAdapter
+import com.deny.studyarchietecturemvvm.adapter.PessoasEstaticaAdapter
+import com.deny.studyarchietecturemvvm.adapter.PessoasFireBaseAdapter
 import com.deny.studyarchietecturemvvm.databinding.FragmentListaPessoasBinding
 import com.deny.studyarchietecturemvvm.ui.fragments.pessoa.PessoaViewModel
 
@@ -37,10 +38,9 @@ class ListaPessoaFragment : Fragment() {
         _binding = FragmentListaPessoasBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.recyclerViewListaPessoas.layoutManager = LinearLayoutManager(context)
-
         listaPessoaViewModel.listaPessoas.observe(viewLifecycleOwner, Observer {
-            binding.recyclerViewListaPessoas.adapter = PessoaAdapter(it.getListaPessoas())
+            binding.recyclerViewListaPessoas.adapter = PessoasEstaticaAdapter(it.getListaPessoas())
+            binding.recyclerViewListaPessoas.layoutManager = LinearLayoutManager(context)
         })
 
         val textViewRecebe: TextView = binding.textViewRecebe

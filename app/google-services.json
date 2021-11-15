@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "52772471318",
+    "project_id": "architeturemvvm",
+    "storage_bucket": "architeturemvvm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52772471318:android:dcf717c35ea1e013fbeb37",
+        "android_client_info": {
+          "package_name": "com.deny.studyarchietecturemvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52772471318-u0e8dcurpck3vtf46icm17a2avd7mavf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.deny.studyarchietecturemvvm",
+            "certificate_hash": "a93dd328be732a6c02efac788adfe483be28d553"
+          }
+        },
+        {
+          "client_id": "52772471318-olk9ou7mhbiit1g7sui62bmhip48fe7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdUKdSf2gJpwRBSpV-OVMJyqF7g243eXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52772471318-olk9ou7mhbiit1g7sui62bmhip48fe7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,10 +7,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.deny.studyarchietecturemvvm.R
 import com.deny.studyarchietecturemvvm.model.Pessoa
-import org.w3c.dom.Text
 
-class PessoaAdapter(var listaPessoa: MutableList<Pessoa> ):
-    RecyclerView.Adapter<PessoaAdapter.MyViewHolder>() {
+class PessoasEstaticaAdapter(var listaPessoa: MutableList<Pessoa>):
+    RecyclerView.Adapter<PessoasEstaticaAdapter.MyViewHolder>() {
+
 
     inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view){
         fun bind(itemPessoa: Pessoa){
@@ -25,7 +25,7 @@ class PessoaAdapter(var listaPessoa: MutableList<Pessoa> ):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.lista_pessoas, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.lista_pessoas, parent, false)
         return MyViewHolder(view)
     }
 

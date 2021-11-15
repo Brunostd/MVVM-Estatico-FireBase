@@ -3,5 +3,5 @@
     <string name="title_activity_conteudo">Conteudo</string>
     <string name="title_home">Pessoa</string>
     <string name="title_dashboard">Lista Pessoas</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Dados do Firebase</string>
 </resources>
