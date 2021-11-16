@@ -41,7 +41,15 @@ class ListaFireBaseFragment : Fragment() {
         _binding = FragmentFirebaseListaBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        //Iniciando shimmer
+        binding.shimmerViewContainer.startShimmer()
         listaFireBaseViewModel.getLista().observe(viewLifecycleOwner, Observer {
+            //Parando shimmer ao realizar a busca pelos dados
+            binding.shimmerViewContainer.stopShimmer()
+            binding.shimmerViewContainer.hideShimmer()
+            binding.shimmerViewContainer.visibility = View.GONE
+            //Fim shimmer
+            //-----------------------------------------------------
             adapter = PessoasFireBaseAdapter(it)
             binding.recyclerViewFireBase.adapter = adapter
             binding.recyclerViewFireBase.layoutManager = LinearLayoutManager(context)

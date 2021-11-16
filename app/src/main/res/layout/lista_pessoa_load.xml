@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/textViewListaNome"
+            android:layout_width="300dp"
+            android:layout_height="12dp"
+            android:background="@color/placeholder_bg"
+            android:layout_marginBottom="8dp"
+            android:padding="10dp"
+            android:text="Nome:"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/textViewListaIdade"
+            android:layout_width="300dp"
+            android:layout_height="12dp"
+            android:background="@color/placeholder_bg"
+            android:layout_marginBottom="8dp"
+            android:padding="10dp"
+            android:text="Idade:"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/textViewListaEmail"
+            android:layout_width="300dp"
+            android:layout_height="12dp"
+            android:background="@color/placeholder_bg"
+            android:padding="10dp"
+            android:text="Email:"
+            android:textSize="20sp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
